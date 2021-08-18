@@ -161,3 +161,57 @@ zstd 1.5.0 -4             244 MB/s  1325 MB/s    65488885  30.90 silesia.tar
 zstd 1.5.0 -5             174 MB/s  1305 MB/s    63793700  30.10 silesia.tar
 done... (cIters=1 dIters=1 cTime=3.0 dTime=16.0 chunkSize=1706MB cSpeed=0MB)
 ```
+
+```
+lzbench 1.8 (64-bit Linux)  Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+Assembled by P.Skibinski
+
+Compressor name         Compress. Decompress. Compr. size  Ratio Filename
+memcpy                  14301 MB/s 14328 MB/s   211962880 100.00 silesia.tar
+density 0.14.2 -1        1475 MB/s  2339 MB/s   133054498  62.77 silesia.tar
+density 0.14.2 -2         715 MB/s  1171 MB/s   101641644  47.95 silesia.tar
+density 0.14.2 -3         353 MB/s   362 MB/s    87649352  41.35 silesia.tar
+fastlz 0.5.0 -1           268 MB/s   621 MB/s   104631274  49.36 silesia.tar
+fastlz 0.5.0 -2           278 MB/s   618 MB/s   100909120  47.61 silesia.tar
+lizard 1.0 -10            440 MB/s  2645 MB/s   103395318  48.78 silesia.tar
+lizard 1.0 -11            289 MB/s  2468 MB/s    93880812  44.29 silesia.tar
+lizard 1.0 -12            146 MB/s  2447 MB/s    86228072  40.68 silesia.tar
+lizard 1.0 -13             94 MB/s  2480 MB/s    83768704  39.52 silesia.tar
+lizard 1.0 -14             83 MB/s  2517 MB/s    82201394  38.78 silesia.tar
+lz4 1.9.3                 528 MB/s  3317 MB/s   100883711  47.59 silesia.tar
+lz4fast 1.9.3 -3          609 MB/s  3364 MB/s   107063555  50.51 silesia.tar
+lz4fast 1.9.3 -17         914 MB/s  3680 MB/s   131741552  62.15 silesia.tar
+lzf 3.6 -0                301 MB/s   543 MB/s   105685269  49.86 silesia.tar
+lzf 3.6 -1                299 MB/s   558 MB/s   102044344  48.14 silesia.tar
+lzfse 2017-03-08           43 MB/s   684 MB/s    67622780  31.90 silesia.tar
+lzjb 2010                 271 MB/s   329 MB/s   122676119  57.88 silesia.tar
+lzo1b 2.10 -1             185 MB/s   582 MB/s    97038306  45.78 silesia.tar
+lzo1c 2.10 -1             190 MB/s   520 MB/s    99555162  46.97 silesia.tar
+lzo1f 2.10 -1             147 MB/s   455 MB/s    99744863  47.06 silesia.tar
+lzo1x 2.10 -1             295 MB/s   482 MB/s   100552614  47.44 silesia.tar
+lzo1y 2.10 -1             315 MB/s   518 MB/s   101237218  47.76 silesia.tar
+lzrw 15-Jul-1991 -1       182 MB/s   397 MB/s   113766411  53.67 silesia.tar
+lzrw 15-Jul-1991 -3       228 MB/s   432 MB/s   105428976  49.74 silesia.tar
+lzrw 15-Jul-1991 -4       224 MB/s   387 MB/s   100135668  47.24 silesia.tar
+lzrw 15-Jul-1991 -5       100 MB/s   387 MB/s    90814452  42.84 silesia.tar
+lzsse4fast 2019-04-18     161 MB/s  2463 MB/s    95924999  45.26 silesia.tar
+lzsse8fast 2019-04-18     157 MB/s  2559 MB/s    94945126  44.79 silesia.tar
+lzvn 2017-03-08            46 MB/s   782 MB/s    80817022  38.13 silesia.tar
+pithy 2011-12-24 -0       439 MB/s  1353 MB/s   103224325  48.70 silesia.tar
+pithy 2011-12-24 -3       436 MB/s  1338 MB/s    97252492  45.88 silesia.tar
+pithy 2011-12-24 -6       397 MB/s  1385 MB/s    92017637  43.41 silesia.tar
+pithy 2011-12-24 -9       347 MB/s  1395 MB/s    90355341  42.63 silesia.tar
+quicklz 1.5.0 -1          405 MB/s   497 MB/s    94728941  44.69 silesia.tar
+quicklz 1.5.0 -2          200 MB/s   476 MB/s    84559641  39.89 silesia.tar
+shrinker 0.1             1068 MB/s  3701 MB/s   160535633  75.74 silesia.tar
+snappy 2020-07-11         382 MB/s  1489 MB/s   102200650  48.22 silesia.tar
+tornado 0.6a -1           318 MB/s   406 MB/s   107425030  50.68 silesia.tar
+tornado 0.6a -2           266 MB/s   385 MB/s    90101451  42.51 silesia.tar
+tornado 0.6a -3           160 MB/s   239 MB/s    72619148  34.26 silesia.tar
+zstd 1.5.0 -1             364 MB/s  1204 MB/s    73495800  34.67 silesia.tar
+zstd 1.5.0 -2             299 MB/s   881 MB/s    69579825  32.83 silesia.tar
+zstd 1.5.0 -3             149 MB/s   847 MB/s    66664863  31.45 silesia.tar
+zstd 1.5.0 -4              95 MB/s   668 MB/s    65488885  30.90 silesia.tar
+zstd 1.5.0 -5              76 MB/s   807 MB/s    63793700  30.10 silesia.tar
+done... (cIters=1 dIters=1 cTime=3.0 dTime=16.0 chunkSize=1706MB cSpeed=0MB)
+```
