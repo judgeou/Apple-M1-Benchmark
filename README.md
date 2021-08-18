@@ -1,5 +1,7 @@
 # Apple-M1-Benchmark
 
+## lzbench 
+
 ```
 lzbench 1.8 (64-bit MacOS)  (m1)
 Assembled by P.Skibinski
