@@ -1,7 +1,7 @@
 # Apple-M1-Benchmark
 
 ```
-lzbench 1.8 (64-bit MacOS)  (null)
+lzbench 1.8 (64-bit MacOS)  (m1)
 Assembled by P.Skibinski
 
 Compressor name         Compress. Decompress. Compr. size  Ratio Filename
