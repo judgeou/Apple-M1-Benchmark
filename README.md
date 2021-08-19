@@ -63,6 +63,37 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ```
 
+### Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz 4core 16GB
+
+```sh
+$ cc --version
+cc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+$ ./zstd -T1 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73495800 (2.884), 375.0 MB/s ,1189.1 MB/s
+ 2#silesia.tar       : 211962880 ->  69579825 (3.046), 306.1 MB/s ,1116.8 MB/s
+ 3#silesia.tar       : 211962880 ->  66664863 (3.180), 219.5 MB/s ,1093.8 MB/s
+ 4#silesia.tar       : 211962880 ->  65488885 (3.237), 176.9 MB/s ,1088.5 MB/s
+ 5#silesia.tar       : 211962880 ->  63793700 (3.323), 120.6 MB/s ,1069.2 MB/s
+
+$ ./zstd -T4 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73584770 (2.881),1055.5 MB/s ,1182.8 MB/s
+ 2#silesia.tar       : 211962880 ->  69682045 (3.042), 787.4 MB/s ,1091.7 MB/s
+ 3#silesia.tar       : 211962880 ->  66740063 (3.176), 397.0 MB/s ,1086.1 MB/s
+ 4#silesia.tar       : 211962880 ->  65608085 (3.231), 183.2 MB/s ,1076.1 MB/s
+ 5#silesia.tar       : 211962880 ->  63889049 (3.318), 147.9 MB/s ,1061.7 MB/s
+ 
+$ ./zstd -T8 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73584770 (2.881),1535.2 MB/s ,1190.6 MB/s
+ 2#silesia.tar       : 211962880 ->  69682045 (3.042), 962.7 MB/s ,1123.9 MB/s
+ 3#silesia.tar       : 211962880 ->  66740063 (3.176), 253.5 MB/s ,1106.3 MB/s
+ 4#silesia.tar       : 211962880 ->  65608085 (3.231), 154.9 MB/s ,1100.0 MB/s
+ 5#silesia.tar       : 211962880 ->  63889049 (3.318), 117.3 MB/s ,1082.0 MB/s
+```
+
 ## lzbench 
 
 ```
