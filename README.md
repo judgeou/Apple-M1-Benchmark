@@ -32,6 +32,37 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
  5#silesia.tar       : 211962880 ->  63889049 (3.318), 651.4 MB/s ,1262.6 MB/s
 ```
 
+### Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz 8core 16GB
+
+```sh
+$ cc --version
+cc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+# ./zstd -T1 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73495800 (2.884), 458.3 MB/s ,1481.2 MB/s
+ 2#silesia.tar       : 211962880 ->  69579825 (3.046), 357.2 MB/s ,1372.2 MB/s
+ 3#silesia.tar       : 211962880 ->  66664863 (3.180), 260.1 MB/s ,1342.2 MB/s
+ 4#silesia.tar       : 211962880 ->  65488885 (3.237), 241.3 MB/s ,1316.1 MB/s
+ 5#silesia.tar       : 211962880 ->  63793700 (3.323), 173.4 MB/s ,1297.3 MB/s
+ 
+# ./zstd -T4 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73584770 (2.881),1636.1 MB/s ,1479.6 MB/s
+ 2#silesia.tar       : 211962880 ->  69682045 (3.042),1211.7 MB/s ,1372.3 MB/s
+ 3#silesia.tar       : 211962880 ->  66740063 (3.176), 819.9 MB/s ,1342.4 MB/s
+ 4#silesia.tar       : 211962880 ->  65608085 (3.231), 415.7 MB/s ,1318.0 MB/s
+ 5#silesia.tar       : 211962880 ->  63889049 (3.318), 317.4 MB/s ,1296.5 MB/s
+ 
+# ./zstd -T8 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73584770 (2.881),2568.8 MB/s ,1479.2 MB/s
+ 2#silesia.tar       : 211962880 ->  69682045 (3.042),1828.1 MB/s ,1373.8 MB/s
+ 3#silesia.tar       : 211962880 ->  66740063 (3.176), 677.6 MB/s ,1337.7 MB/s
+ 4#silesia.tar       : 211962880 ->  65608085 (3.231), 201.1 MB/s ,1312.2 MB/s
+ 5#silesia.tar       : 211962880 ->  63889049 (3.318), 164.5 MB/s ,1294.0 MB/s
+```
+
 ### Intel(R) Xeon(R) CPU E5-2603 v4 @ 1.70GHz 12core 64GB
 ```sh
 # cc --version
