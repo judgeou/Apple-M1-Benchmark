@@ -1,6 +1,6 @@
 # Apple-M1-Benchmark
 
-## zstd
+## zstd v1.5.0
 
 ### Macbook Air M1 16GB
 ```sh
@@ -30,6 +30,37 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
  3#silesia.tar       : 211962880 ->  66740063 (3.176),1389.9 MB/s ,1298.5 MB/s 
  4#silesia.tar       : 211962880 ->  65608085 (3.231), 963.5 MB/s ,1299.6 MB/s 
  5#silesia.tar       : 211962880 ->  63889049 (3.318), 651.4 MB/s ,1262.6 MB/s
+```
+
+### Intel(R) Xeon(R) CPU E5-2603 v4 @ 1.70GHz 12core 64GB
+```sh
+# cc --version
+cc (Ubuntu 10.1.0-2ubuntu1~18.04) 10.1.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+# ./zstd -T1 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73495800 (2.884), 169.8 MB/s , 567.1 MB/s 
+ 2#silesia.tar       : 211962880 ->  69579825 (3.046), 135.6 MB/s , 490.8 MB/s 
+ 3#silesia.tar       : 211962880 ->  66664863 (3.180),  99.0 MB/s , 461.3 MB/s 
+ 4#silesia.tar       : 211962880 ->  65488885 (3.237),  94.1 MB/s , 429.8 MB/s 
+ 5#silesia.tar       : 211962880 ->  63793700 (3.323),  61.0 MB/s , 437.4 MB/s 
+
+# ./zstd -T4 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73584770 (2.881), 612.1 MB/s , 550.3 MB/s 
+ 2#silesia.tar       : 211962880 ->  69682045 (3.042), 469.9 MB/s , 478.1 MB/s 
+ 3#silesia.tar       : 211962880 ->  66740063 (3.176), 342.3 MB/s , 462.2 MB/s 
+ 4#silesia.tar       : 211962880 ->  65608085 (3.231), 326.6 MB/s , 429.7 MB/s 
+ 5#silesia.tar       : 211962880 ->  63889049 (3.318), 215.6 MB/s , 439.9 MB/s 
+ 
+# ./zstd -T8 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73584770 (2.881),1053.0 MB/s , 548.3 MB/s 
+ 2#silesia.tar       : 211962880 ->  69682045 (3.042), 803.1 MB/s , 493.7 MB/s 
+ 3#silesia.tar       : 211962880 ->  66740063 (3.176), 488.7 MB/s , 461.3 MB/s 
+ 4#silesia.tar       : 211962880 ->  65608085 (3.231), 424.3 MB/s , 432.2 MB/s 
+ 5#silesia.tar       : 211962880 ->  63889049 (3.318), 317.8 MB/s , 421.9 MB/s
+
 ```
 
 ## lzbench 
