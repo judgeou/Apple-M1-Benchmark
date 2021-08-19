@@ -1,5 +1,37 @@
 # Apple-M1-Benchmark
 
+## zstd
+
+### Macbook Air M1 16GB
+```sh
+% cc --version
+Apple clang version 12.0.5 (clang-1205.0.22.11)
+Target: arm64-apple-darwin20.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+% ./zstd -T1 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73495800 (2.884), 542.9 MB/s ,1446.7 MB/s 
+ 2#silesia.tar       : 211962880 ->  69579825 (3.046), 436.8 MB/s ,1342.9 MB/s 
+ 3#silesia.tar       : 211962880 ->  66664863 (3.180), 359.2 MB/s ,1325.1 MB/s 
+ 4#silesia.tar       : 211962880 ->  65488885 (3.237), 323.3 MB/s ,1325.3 MB/s 
+ 5#silesia.tar       : 211962880 ->  63793700 (3.323), 184.1 MB/s ,1287.2 MB/s
+ 
+% ./zstd -T4 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73584770 (2.881),1914.1 MB/s ,1445.9 MB/s 
+ 2#silesia.tar       : 211962880 ->  69682045 (3.042),1483.9 MB/s ,1342.5 MB/s 
+ 3#silesia.tar       : 211962880 ->  66740063 (3.176),1183.2 MB/s ,1298.9 MB/s 
+ 4#silesia.tar       : 211962880 ->  65608085 (3.231), 893.1 MB/s ,1299.0 MB/s 
+ 5#silesia.tar       : 211962880 ->  63889049 (3.318), 584.1 MB/s ,1262.3 MB/s
+ 
+% ./zstd -T8 -b1 -e5 ../../lzbench/silesia.tar
+ 1#silesia.tar       : 211962880 ->  73584770 (2.881),2472.2 MB/s ,1439.7 MB/s 
+ 2#silesia.tar       : 211962880 ->  69682045 (3.042),2015.9 MB/s ,1318.2 MB/s 
+ 3#silesia.tar       : 211962880 ->  66740063 (3.176),1389.9 MB/s ,1298.5 MB/s 
+ 4#silesia.tar       : 211962880 ->  65608085 (3.231), 963.5 MB/s ,1299.6 MB/s 
+ 5#silesia.tar       : 211962880 ->  63889049 (3.318), 651.4 MB/s ,1262.6 MB/s
+```
+
 ## lzbench 
 
 ```
