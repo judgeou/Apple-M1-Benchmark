@@ -1,5 +1,56 @@
 # Apple-M1-Benchmark
 
+## linpack
+
+### Macbook Air M1 16GB
+
+```sh
+% clang -O3 -std=c11 linpack.c
+% ./a.out
+
+Memory required:  315K.
+
+
+LINPACK benchmark, Double precision.
+Machine precision:  15 digits.
+Array size 200 X 200.
+Average rolled and unrolled performance:
+
+    Reps Time(s) DGEFA   DGESL  OVERHEAD    KFLOPS
+----------------------------------------------------
+    4096   0.80  82.47%   3.06%  14.47%  8180035.705
+    8192   1.61  82.45%   3.08%  14.47%  8168928.725
+   16384   3.22  82.46%   3.07%  14.47%  8178308.281
+   32768   6.44  82.47%   3.06%  14.48%  8166027.770
+   65536  12.96  82.47%   3.05%  14.48%  8119161.563
+
+
+```
+
+### Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz 8core 16GB
+
+```sh
+# cc -Wall -Wextra -O3 -std=c11 -pedantic -march=native linpack.c  -o linpack
+# ./linpack
+
+Memory required:  315K.
+
+
+LINPACK benchmark, Double precision.
+Machine precision:  15 digits.
+Array size 200 X 200.
+Average rolled and unrolled performance:
+
+    Reps Time(s) DGEFA   DGESL  OVERHEAD    KFLOPS
+----------------------------------------------------
+    4096   0.84  66.67%   0.00%  33.33%  10000308.148
+    8192   1.67  70.09%   2.80%  27.10%  9231053.675
+   16384   3.38  75.46%   3.24%  21.30%  8470849.255
+   32768   6.72  71.63%   3.26%  25.12%  8944374.990
+   65536  13.47  71.46%   2.44%  26.10%  9042664.825
+
+```
+
 ## zstd v1.5.0
 
 ### Macbook Air M1 16GB
